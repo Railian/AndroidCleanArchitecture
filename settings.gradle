@@ -1,0 +1,6 @@
+include ':app',
+        ':dependency-injection',
+        ':domain-contract',
+        ':domain-logic',
+        ':platform',
+        ':presentation'
