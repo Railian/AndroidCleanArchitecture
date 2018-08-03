@@ -3,7 +3,7 @@ package ua.raylyan.cleanarch.dependency.injection
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
-import ua.raylyan.cleanarch.presentation.MainActivity
+import ua.raylyan.cleanarch.presentation.activity.MainActivity
 
 
 @Module(includes = [AndroidSupportInjectionModule::class])
