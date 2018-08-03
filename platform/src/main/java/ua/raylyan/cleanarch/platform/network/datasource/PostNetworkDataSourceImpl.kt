@@ -1,4 +1,4 @@
-package ua.raylyan.cleanarch.platform.datasource
+package ua.raylyan.cleanarch.platform.network.datasource
 
 import io.reactivex.Single
 import ua.raylyan.cleanarch.domain.contract.datasource.PostNetworkDataSource
