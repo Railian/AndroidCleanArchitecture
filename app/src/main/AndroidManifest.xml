@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name="ua.raylyan.cleanarch.presentation.MainActivity">
+        <activity android:name="ua.raylyan.cleanarch.presentation.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

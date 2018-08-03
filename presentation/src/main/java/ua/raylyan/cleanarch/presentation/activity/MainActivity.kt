@@ -1,6 +1,8 @@
-package ua.raylyan.cleanarch.presentation
+package ua.raylyan.cleanarch.presentation.activity
 
 import android.os.Bundle
+import ua.raylyan.cleanarch.presentation.DaggerAppCompatActivity
+import ua.raylyan.cleanarch.presentation.R
 
 class MainActivity : DaggerAppCompatActivity() {
 
