@@ -1,4 +1,4 @@
-package ua.raylyan.cleanarch.presentation
+package ua.raylyan.cleanarch.presentation.util
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
