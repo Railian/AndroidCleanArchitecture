@@ -1,21 +1,20 @@
-package ua.raylyan.cleanarch.presentation
+package ua.raylyan.cleanarch.presentation.scene.posts
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import ua.raylyan.cleanarch.presentation.R
 
-class ListFragment: Fragment() {
+
+class PostsFragment : Fragment() {
 
     companion object {
-        fun newInstance():ListFragment {
-            return ListFragment()
-        }
+        fun newInstance() = PostsFragment()
     }
 
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.list_fragment, container,false)
+        return inflater.inflate(R.layout.fragment_posts, container, false)
     }
 }
