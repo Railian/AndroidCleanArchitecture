@@ -1,4 +1,4 @@
-package ua.raylyan.cleanarch.presentation
+package ua.raylyan.cleanarch.presentation.util
 
 import androidx.annotation.CallSuper
 import androidx.annotation.MainThread
@@ -6,16 +6,17 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import io.reactivex.disposables.CompositeDisposable
-import ua.raylyan.cleanarch.presentation.util.SingleLiveEvent
 
 
-@Suppress("unused", "MemberVisibilityCanBePrivate")
 abstract class ReactiveViewModel : ViewModel() {
 
     protected val compositeDisposable = CompositeDisposable()
 
     @CallSuper
     override fun onCleared() = compositeDisposable.clear()
+
+    protected fun ReactiveViewModel.disposable(): Lazy<CompositeDisposable> =
+            lazy { CompositeDisposable() }
 
     protected fun <T> ReactiveViewModel.liveData(): Lazy<LiveData<T>> =
             lazy { MutableLiveData<T>() }
@@ -27,7 +28,7 @@ abstract class ReactiveViewModel : ViewModel() {
             lazy { SingleLiveEvent<T>() }
 
     protected fun <T> ReactiveViewModel.singleLiveEvent(initialValue: T): Lazy<LiveData<T>> =
-            lazy { SingleLiveEvent<T>().apply { setValue(initialValue) } }
+            lazy { SingleLiveEvent<T>().apply { value = initialValue } }
 
     @MainThread
     protected fun <T> LiveData<T>.update(value: T) {
