@@ -3,6 +3,7 @@ package ua.raylyan.cleanarch.presentation.scene.post
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import ua.raylyan.cleanarch.presentation.R
 import ua.raylyan.cleanarch.presentation.util.BaseActivity
 import ua.raylyan.cleanarch.presentation.util.getExtraLong
@@ -26,12 +27,24 @@ class PostActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_post)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         if (savedInstanceState == null) {
             val postFragment = PostFragment.newInstance(getExtraLong(EXTRA_POST_ID))
             supportFragmentManager
                     .beginTransaction()
                     .replace(R.id.container, postFragment)
                     .commit()
+        }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressed()
+                return true
+            }
+            else -> return super.onOptionsItemSelected(item)
         }
     }
 }
