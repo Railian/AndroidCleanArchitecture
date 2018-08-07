@@ -10,7 +10,7 @@ import javax.inject.Inject
 
 class PostCacheDataSourceImpl @Inject constructor() : PostCacheDataSource {
 
-    private val cachedPosts: BehaviorSubject<List<Post>> = BehaviorSubject.create()
+    private val cachedPosts: BehaviorSubject<List<Post>> = BehaviorSubject.createDefault(emptyList())
     private val cachedComments: BehaviorSubject<List<Comment>> = BehaviorSubject.create()
 
     override fun removeAllPosts(): Completable {
@@ -86,6 +86,8 @@ class PostCacheDataSourceImpl @Inject constructor() : PostCacheDataSource {
     }
 
     override fun observeComments(postId: Long): Observable<List<Comment>> {
-        return cachedComments.distinctUntilChanged()
+        return cachedComments
+                .map { it.filter { it.postId == postId } }
+                .distinctUntilChanged()
     }
 }

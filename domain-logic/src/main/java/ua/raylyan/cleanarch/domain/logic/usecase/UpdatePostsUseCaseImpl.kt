@@ -2,12 +2,12 @@ package ua.raylyan.cleanarch.domain.logic.usecase
 
 import io.reactivex.Completable
 import ua.raylyan.cleanarch.domain.contract.repository.PostRepository
-import ua.raylyan.cleanarch.domain.contract.usecase.FetchPostsUseCase
+import ua.raylyan.cleanarch.domain.contract.usecase.UpdatePostsUseCase
 import javax.inject.Inject
 
-class FetchPostsUseCaseImpl @Inject constructor(
+class UpdatePostsUseCaseImpl @Inject constructor(
         private val repository: PostRepository
-) : FetchPostsUseCase {
+) : UpdatePostsUseCase {
 
     override fun invoke(): Completable {
         return repository.fetchPosts()
