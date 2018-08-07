@@ -1,14 +1,14 @@
-# Clean Architecture
+# Android Clean Architecture
 
-This is the example of **clean architecture** in android with using of:
+The example of Clean architecture in Android using:
 - **Kotlin** as the main language,
 - **RxJava** as reactive way of data flow,
 - **ViewModel** and **LiveData** for presentation layer,
 - **Dagger 2** as an injector of dependencies.
 
 The application is divided into 5 main modules:
-- **Domain Contract**
-- **Domain Logic**
+- **Domain Contract (Core)**
+- **Domain Logic (Business Logic)**
 - **Platform**
 - **Presentation**
 - **Dependency Resolver**
