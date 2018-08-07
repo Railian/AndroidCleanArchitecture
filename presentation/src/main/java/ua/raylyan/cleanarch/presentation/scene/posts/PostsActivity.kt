@@ -2,10 +2,10 @@ package ua.raylyan.cleanarch.presentation.scene.posts
 
 import android.os.Bundle
 import ua.raylyan.cleanarch.presentation.R
-import ua.raylyan.cleanarch.presentation.util.DaggerAppCompatActivity
+import ua.raylyan.cleanarch.presentation.util.BaseActivity
 
 
-class PostsActivity : DaggerAppCompatActivity() {
+class PostsActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
