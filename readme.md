@@ -13,6 +13,8 @@ The application is divided into 5 main modules:
 - **Presentation**
 - **Dependency Resolver**
 
+<img src="https://lh6.googleusercontent.com/jpY-L2ccqlLLkyFGMlKMPmsZK5yN_iH4xX9Idxo9cFWSO2XTPwvf1a0TsL8w1XIcDjGhROYnAw8c8RE2LhaN=w2880-h1712-rw" width="400">
+
 ## Domain Contract (Core)
 
 The core of the whole application is **Domain Contract**, were
