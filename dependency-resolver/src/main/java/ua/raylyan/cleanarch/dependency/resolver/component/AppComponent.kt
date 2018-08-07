@@ -1,9 +1,9 @@
-package ua.raylyan.cleanarch.dependency.injection.component
+package ua.raylyan.cleanarch.dependency.resolver.component
 
 import dagger.Component
 import dagger.android.AndroidInjector
-import ua.raylyan.cleanarch.dependency.injection.CleanApplication
-import ua.raylyan.cleanarch.dependency.injection.module.*
+import ua.raylyan.cleanarch.dependency.resolver.CleanApplication
+import ua.raylyan.cleanarch.dependency.resolver.module.*
 import javax.inject.Singleton
 
 

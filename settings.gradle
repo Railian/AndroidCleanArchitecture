@@ -1,5 +1,5 @@
 include ':app',
-        ':dependency-injection',
+        ':dependency-resolver',
         ':domain-contract',
         ':domain-logic',
         ':platform',

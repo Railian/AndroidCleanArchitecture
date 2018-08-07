@@ -9,7 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/dependency-injection" />
+            <option value="$PROJECT_DIR$/dependency-resolver" />
             <option value="$PROJECT_DIR$/domain-contract" />
             <option value="$PROJECT_DIR$/domain-logic" />
             <option value="$PROJECT_DIR$/platform" />

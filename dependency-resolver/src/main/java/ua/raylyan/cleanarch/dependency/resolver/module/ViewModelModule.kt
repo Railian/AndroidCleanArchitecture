@@ -1,12 +1,12 @@
-package ua.raylyan.cleanarch.dependency.injection.module
+package ua.raylyan.cleanarch.dependency.resolver.module
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
-import ua.raylyan.cleanarch.dependency.injection.util.ViewModelFactory
-import ua.raylyan.cleanarch.dependency.injection.util.ViewModelKey
+import ua.raylyan.cleanarch.dependency.resolver.util.ViewModelFactory
+import ua.raylyan.cleanarch.dependency.resolver.util.ViewModelKey
 import ua.raylyan.cleanarch.presentation.scene.post.PostViewModel
 import ua.raylyan.cleanarch.presentation.scene.posts.PostsViewModel
 import javax.inject.Singleton

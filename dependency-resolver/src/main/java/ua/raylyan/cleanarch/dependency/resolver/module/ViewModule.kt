@@ -1,4 +1,4 @@
-package ua.raylyan.cleanarch.dependency.injection.module
+package ua.raylyan.cleanarch.dependency.resolver.module
 
 import dagger.Module
 import dagger.android.ContributesAndroidInjector

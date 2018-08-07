@@ -1,4 +1,4 @@
-package ua.raylyan.cleanarch.dependency.injection.util
+package ua.raylyan.cleanarch.dependency.resolver.util
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey
