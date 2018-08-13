@@ -9,7 +9,6 @@ class PostViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     private lateinit var title: TextView
     private lateinit var body: TextView
-    private lateinit var rank: TextView
     private lateinit var number: TextView
 
 

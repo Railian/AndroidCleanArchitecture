@@ -10,8 +10,10 @@ import androidx.recyclerview.widget.RecyclerView
 import java.util.ArrayList
 
 class ListFragment: Fragment() {
+
+    private var uiClickListener: PostClickListener? = null
     companion object {
-        fun newInstance():ListFragment {
+        fun netInstance():ListFragment {
             return ListFragment()
         }
     }
@@ -25,8 +27,10 @@ class ListFragment: Fragment() {
         val list = view.findViewById<RecyclerView>(R.id.rvPostsList)
         list.layoutManager = LinearLayoutManager(view.context)
         val adapter = PostsListAdapter()
+        adapter.setclickListener(this.activity as PostClickListener)
         val generatorData = PostsGenerator()
         adapter.setData(ArrayList(generatorData.generateDemoData()))
         list.adapter = adapter
     }
+
 }
